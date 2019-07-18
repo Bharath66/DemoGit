@@ -1,6 +1,8 @@
 package org.test.git;
 
-public class Axis implements HDFC{
+import org.test.demo.SBI;
+
+public class Axis implements SBI,HDFC{
 
 	@Override
 	public void deposit() {
@@ -13,10 +15,24 @@ public class Axis implements HDFC{
 		System.out.println("deposit interest is 8%");
 		
 	}
+
+	@Override
+	public void fixedAmount() {
+		System.out.println("The fixed amount is 10000");
+		
+	}
+
+	@Override
+	public void fixedInterest() {
+		System.out.println("The fixed interest is 10%");
+		
+	}
 	public static void main(String[] args) {
 		Axis a = new Axis();
 		a.deposit();
 		a.dInterest();
+		a.fixedAmount();
+		a.fixedInterest();
 	}
 
 }
